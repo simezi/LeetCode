@@ -1,6 +1,6 @@
 # about
 
-This repository is my solution for [leetCode](https://leetcode.com/) problems written in JavaScript
+This repository is my submission for [leetCode](https://leetcode.com/) problems written in JavaScript
 
 # link
 
