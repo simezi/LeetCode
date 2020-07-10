@@ -4,16 +4,16 @@
  */
 var findSubsequences = function (nums) {
   let result = [];
-  let set = new Set();
+  let map = {};
   function helper(current, nums) {
     if (nums.length == 0) {
       return;
     }
     if (current.length == 0 || nums[0] >= current[current.length - 1]) {
       current.push(nums[0]);
-      if (current.length > 1 && !set.has("" + current)) {
+      if (current.length > 1 && map[current.join(",")] == null) {
         result.push(current.slice());
-        set.add("" + current);
+        map[current.join(",")] = 1;
       }
       helper(current, nums.slice(1));
       current.pop();
